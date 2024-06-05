@@ -1,0 +1,422 @@
+a, button {
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+html, body {
+    overflow-wrap: break-word;
+}
+
+ul {
+    list-style-type: none;
+}
+  
+li {
+    display: inline-block;
+}
+
+a:hover, button:hover {
+    text-decoration: none;
+}
+
+.form-view {
+    height: 100vh;
+    display: flex;
+    background-color: rgb(198, 188, 177);
+}
+
+.h-loginupdate {
+    height: 92vh;
+}
+
+#form-login, #loginupdateform {
+    width: 15rem;
+    margin: auto;
+}
+
+#loginupdateform label {
+    color: black;
+}
+
+#submit-button {
+    color: white;
+}
+
+.main-nav {
+    background-color: rgb(226, 226, 226);
+}
+
+.container-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.main-menu a, .config-menu button {
+    padding: 3px 6px 3px 3px;
+    color: black;
+}
+
+.main-menu a:hover, .config-menu button:hover, .active-tab {
+    background-color: white;
+    color: black;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+#user button:hover  {
+    background-color: rgb(193, 193, 193);
+}
+
+.fa-solid, .fa-dochub, .fa-hubspot {
+    color: #778827;
+}
+
+#inicio {
+    height: 100vh;
+    display: flex;
+}
+
+#inicio div {
+    margin: auto;
+}
+
+.trido {
+    background-color: rgba(255,228,174,255);
+}
+
+.tridg {
+    background-color: rgba(170,255,170,255);
+}
+
+.tridr {
+    background-color: rgb(255, 175, 175);
+}
+
+.t-select, .t-selected, .auth-selected {
+    background-color: rgb(0, 157, 255);
+}
+
+.form-uso {
+    margin-left: 4rem;
+    width: 7rem;
+    border: 1px solid rgb(214, 214, 214);
+    padding: 0.5rem;
+}
+
+.form-uso-error {
+    margin-left: 4rem;
+    width: 7rem;
+    border: 1px solid rgb(255, 52, 52);
+    padding: 0.5rem;
+}
+
+.form-adquisicion {
+    border: 1px solid rgb(214, 214, 214);
+    padding: 0.5rem;
+}
+
+.foaother-display {
+    display: none;
+}
+
+.form-uso label, .form-adquisicion label, #form-login label {
+    color: black;
+}
+
+form label {
+    color: blue;
+}
+
+@media (max-width: 992px) {
+    .form-uso, .form-uso-error {
+        margin: 0;
+    }
+
+}
+
+.table-solicitudes {
+    height: 75vh;
+    line-height: 1em;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.btn-s-modal {
+    background-color: rgb(203, 203, 203);
+    border-radius: 3px;
+}
+.btn-s-modal:hover {
+    background-color: rgb(182, 182, 182);
+    border-radius: 3px;
+}
+
+.border-id {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/*  */
+
+.input_compromisos {
+    border: none;
+    width: 100%;
+    background-color: transparent;
+}
+
+.input_compromisos::placeholder {
+    color: rgb(0, 165, 3);
+    font-weight: bold;
+}
+
+.tab-modal {
+    height: 2.5rem;
+    border: 1px solid silver;
+    background-color: rgb(225, 225, 225);
+}
+
+.tab-modal-button, .tab-active {
+    border: none;
+    background-color: transparent;
+    height: 100%;
+}
+
+.tab-modal-button:hover {
+    background-color: silver;
+}
+
+.tab-active {
+    background-color: silver;
+}
+
+#relacion-div {
+    display: block;
+}
+
+#pago-div {
+    display: none;
+}
+
+#adjuntos-div {
+    display: none;
+}
+
+.table-input {
+    border: none;
+    background-color: transparent;
+}
+
+.table-input:focus {
+    outline: none;
+}
+
+#menu-general,
+#menu-grupos,
+#menu-usuarios,
+#menu-permisos,
+#menu-autorizaciones,
+#menu-registros,
+#menu-reportes-datos,
+#menu-reportes,
+#vehiculos,
+#ejes,
+#rubros,
+#documentacion,
+#conductores {
+    display: none;
+}
+
+table td {
+    padding: 0;
+    margin: 0;
+}
+
+.table-input {
+    border: none;
+    padding: 0rem;
+    width: 7%;
+    background-color: transparent;
+}
+
+.table-input input:focus {
+    outline: none;
+}
+
+.table-container {
+    border: 1px solid;
+    margin: 0;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.table-h75 {
+    height: 75vh;
+}
+
+.table-h80 {
+    height: 80vh;
+}
+
+.table-h85 {
+    height: 85vh;
+}
+
+.table-h70 {
+    height: 70vh;
+}
+
+.table-h65 {
+    height: 65vh;
+}
+
+.table-h20 {
+    height: 20vh;
+}
+
+.table-h15 {
+    height: 15vh;
+}
+
+.programa-doc-div {
+    height: 32.8vh;
+}
+
+.tipos-conductores-h {
+    height: 80vh;
+    width: 100%;
+}
+
+.table-h30 {
+    height: 30vh;
+}
+
+.table-h49 {
+    height: 49vh;
+}
+
+.table-h23 {
+    height: 23vh;
+}
+
+.btn-actualizar {
+    position: fixed;
+    bottom: 0.8rem;
+    right: 1rem;
+}
+
+.table-h30 {
+    height: 30vh;
+}
+
+.table-h45 {
+    height: 45vh;
+}
+
+.td-up-selected, unt-selected {
+    background-color: yellow;
+}
+
+.tdcheckbox {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.authactions {
+    margin: 1.5px;
+    /* //background-color: rgb(201, 153, 33); */
+    /* border-radius: 100%; */
+}
+
+.table-tds {
+    table-layout: fixed;
+}
+
+.onprintrepo {
+    border: 1px solid rgb(195, 195, 195);
+}
+.onprintrepoerror {
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.onprintrepo label {
+    font-size: 0.85rem;
+}
+
+.onprintrepo p {
+    font-weight: bolder;
+    margin: 0;
+}
+
+.table-sql {
+    width: 5rem;
+}
+
+.tdsize {
+    width: 5rem;
+}
+
+input[type="checkbox"][id^="report"] {
+    display: none;
+}
+
+.idlabel {
+    border: 1px solid #fff;
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.idlabel:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+}
+
+.idlabel img {
+    /* height: 100px;
+    width: 100px; */
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+}
+
+:checked + .idlabel {
+    border-color: #ddd;
+}
+  
+:checked + .idlabel:before {
+    content: "✓";
+    background-color: rgb(0, 179, 255);
+    transform: scale(1);
+}
+  
+:checked + .idlabel img {
+    transform: scale(0.9);
+    /* box-shadow: 0 0 5px #333; */
+    z-index: -1;
+}
+
+#loadview {
+    height: 97vh;
+    display: flex;
+}
+.spinner-border {
+    margin: auto;
+}
