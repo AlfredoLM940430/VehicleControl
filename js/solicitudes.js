@@ -1,4 +1,10 @@
+import { ajaxConfig } from "./helpers/ajaxConfig.js";
+import { formJsonGet } from "./helpers/formJsonGet.js";
+
 $(document).ready(function () {
+
+    ajaxConfig();
+    formJsonGet();
 
     const token = localStorage.getItem('token');
     const user = localStorage.getItem('name');
@@ -169,6 +175,10 @@ $(document).ready(function () {
     // TODO
     $('#nueva-solicitud').submit(function (e) {
         e.preventDefault();
+        let formdata = new FormData(this);
+        console.log(formdata); 
+        console.log($('#nueva-solicitud').toJSON());
+        return;
         const id = localStorage.getItem('solicitudId');
         startSavingSolicitud(this, token, id);
     });
@@ -277,8 +287,6 @@ function listaSolicitudes(token) {
     renderSolicitudes();
     return;
     $.ajax({
-        type: 'POST',
-        url: 'https://lionware.dev/services/sgv/webservice/index.php',
         data: {
             method: 'request.select2',
             token,
@@ -79002,8 +79010,6 @@ function renderSolicitudes(response) {
 
 function callResponsables(token) {
     $.ajax({
-        type: 'POST',
-        url: 'https://lionware.dev/services/sgv/webservice/index.php',
         data: {
             method: 'users.select',
             token,
@@ -79035,8 +79041,6 @@ function listaResponsables(response, token) {
 
 function callStates() {
     $.ajax({
-        type: 'POST',
-        url: 'https://lionware.dev/services/sgv/webservice/index.php',
         data: {
             method: 'common.states',
         },
@@ -79061,8 +79065,6 @@ function listaEstados(response) {
 
 function callMunicipalities(id) {
     $.ajax({
-        type: 'POST',
-        url: 'https://lionware.dev/services/sgv/webservice/index.php',
         data: {
             method: 'common.municipalities',
             state: id
@@ -79092,8 +79094,6 @@ function listaMunicipios(response) {
 
 function callEjes() {
     $.ajax({
-        type: 'POST',
-        url: 'https://lionware.dev/services/sgv/webservice/index.php',
         data: {
             method: 'hubs.select',
         },
@@ -79120,8 +79120,6 @@ function listaEjes(response) {
 
 function callRubros() {
     $.ajax({
-        type: 'POST',
-        url: 'https://lionware.dev/services/sgv/webservice/index.php',
         data: {
             method: 'items.select',
         },
@@ -79184,8 +79182,6 @@ function nuevaSolicitud(target) {
 
 function listaAutos(token) {
     $.ajax({
-        type: 'POST',
-        url: 'https://lionware.dev/services/sgv/webservice/index.php',
         data: {
             method: 'vehicles.select',
             token,
@@ -79714,8 +79710,6 @@ function createUpdateSolicitud(FormData, id) {
 
     console.log(FormData);
     $.ajax({
-        type: 'POST',
-        url: 'https://lionware.dev/services/sgv/webservice/index.php',
         data: FormData,
         contentType: false,
         cache: false,
@@ -79883,8 +79877,6 @@ function deletingSolicitud(id, token) {
     $(`#${id}solicitudes`).remove();
 
     $.ajax({
-        type: 'POST',
-        url: 'https://lionware.dev/services/sgv/webservice/index.php',
         data: {
             method: 'request.delete',
             token,
@@ -79922,8 +79914,6 @@ function startApprovingSolicitud(token, id) {
 
     return;
     $.ajax({
-        type: 'POST',
-        url: 'https://lionware.dev/services/sgv/webservice/index.php',
         data: {
             method: 'request.approve',
             token,
@@ -79962,8 +79952,6 @@ function startCancelingSolicitud(formData) {
 
     return;
     $.ajax({
-        type: 'POST',
-        url: 'https://lionware.dev/services/sgv/webservice/index.php',
         data: formData,
         processData: false,
         contentType: false,

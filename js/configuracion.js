@@ -288,7 +288,11 @@ $(document).ready(function () {
             e.target.id !== 'addAuth'  &&
             e.target.id !== 'removeAuth' &&
             e.target.parentElement.id !== 'addAuth'  &&
-            e.target.parentElement.id !== 'removeAuth'
+            e.target.parentElement.id !== 'removeAuth' &&
+            e.target.id !== 'plusbutton'  &&
+            e.target.id !== 'lessbutton' &&
+            e.target.parentElement.id !== 'plusbutton'  &&
+            e.target.parentElement.id !== 'lessbutton'
         ) {
             localStorage.removeItem('marca');
             localStorage.removeItem('deleteAuth');
@@ -325,7 +329,8 @@ $(document).ready(function () {
             if(!(localStorage.getItem('marca'))) {
                 $('#authhub').prop('disabled', true);
                 $('#authhub').val('');
-                $('#authGroupOption').empty();
+                //$('#authGroupOption').empty();
+                $('#authGroupOption').css('display', 'none');
                 $('#isAuthGroup').empty();
             }
         }
@@ -2341,6 +2346,7 @@ function selectEjes(response) {
 function loadSetAuth() {
     const group = localStorage.getItem('marca');
     const hub = $('#authhub').val();
+    console.log(group, hub);
     $.ajax({
         type: 'POST',
         url: 'https://lionware.dev/services/sgv/webservice/index.php',
@@ -2367,11 +2373,14 @@ function isAuth(response) {
     
     if(response.records === undefined || response.records.length === 0) return;
 
+    console.log(response);
+
     let permission = [];
     response.records.forEach((el) => {
         el.forEach((id) => {
-            console.log(id);
             $('#authGroupOption tr').each(function (index, element) {
+                console.log(id, this.id.split('').reverse().slice(6).reverse().join(''));
+
                 if(id == this.id.split('').reverse().slice(6).reverse().join('')) {
                     permission = [...permission, `${this.outerText},${this.id.split('').reverse().slice(6).reverse().join('')}`];
                 }
@@ -2394,7 +2403,6 @@ function isAuth(response) {
         });
     }); 
     console.log(permission);
-
 }
 
 function createAuth() {
@@ -3047,6 +3055,7 @@ function orderControl(prop) {
 }
 
 function orderAuth(param) {
+
     
     const control = localStorage.getItem('deleteTR');
     if(param.id == 'plusbutton') {
